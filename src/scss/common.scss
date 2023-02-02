@@ -1,5 +1,11 @@
 // Заголовки, загальні БЕМ блоки та інше...
-//---Title------/
+.page {
+
+   &__main {
+   }
+}
+
+//--------Title------/
 .title {
 
    &__lable {
@@ -28,5 +34,45 @@
       font-weight: 700;
       font-size: rem(36);
       line-height: math.div( 45, 36);
+      span {
+         color: $purpleColor;
+      }
+      &_big {
+         font-size: rem(44);
+         line-height: math.div(55, 44);
+
+		}
    }
 }
+
+//--------Text------/
+.text {
+   line-height: math.div(32, 16);
+   p{
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+ }
+//--------------------Social-----------------------------/
+
+.social {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   row-gap: rem(5); 
+   @include adaptiveValue("column-gap", 32, 15);
+
+   &__link {
+      font-size: 1.375rem;
+      @media (any-hover: hover){
+         &:hover{
+            color: $purpleColor;
+         }  
+      }
+   }
+}
+
+
+
+
