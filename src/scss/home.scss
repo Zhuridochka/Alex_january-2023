@@ -121,27 +121,33 @@
    &__item {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: rem(53) rem(30);
+      
    }
 }
-.title {
+// .title {
 
-   &__lable {
-      text-align: center;
-   }
+//    &__lable {
+//       text-align: center;
+//    }
 
-   &__value {
-   }
-}
-.item-servise { 
+//    &__value {
+//    }
+// }
+.item-servise {
+   background: #FFFFFF;
+   border-radius: rem(8);
+   display: grid;
+   justify-items: center;
+   text-align: center;
+   @include adaptiveValue("padding", 56, 15);
+
 
    &__icon {
-      width: rem(56);
-      height: rem(56);
-      background-color:  #F5F3FE;
-      border-radius: 16px;
+      width: 56px;
+      height: 56px;
       display: flex;
+      background-color:  #F5F3FE;
+      border-radius: rem(16);
       align-items: center;
       justify-content: center;
       &:not(:last-child) {margin-bottom: rem(24);}
