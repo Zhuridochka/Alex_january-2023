@@ -9,18 +9,16 @@
       grid-template-columns: repeat(2, 1fr);
       padding-top: rem(80);
       padding-bottom: rem(30);
+      column-gap: rem(20);
       @media (max-width:$mobile){
          grid-template-columns: 1fr;
-           
+         row-gap: rem(30);
+         justify-content: center; 
       }
    }
 
    &__content {
-      @include adaptiveValue("padding-right", 110, 5);
-      @media (min-width:$mobile){
-          padding-right: 0; 
-      }
-   }
+          }
 
    &__title {
       &:not(:last-child) {margin-bottom: 32px;}
@@ -39,10 +37,16 @@
 
    .decor-main-section {
          max-width: 336px;
-         margin: rem(30) rem(22) 0 rem(22); 
+         margin: 0 rem(22); 
+         justify-self: center;
          @media (min-width:$mobile){
             width: 100%;
             justify-self: end;   
+         }
+         @media (max-width:$mobile){
+            max-width: none;
+            @include adaptiveValue("width", 336, 246);
+              
          }
    
       &__box {
@@ -86,10 +90,76 @@
          left: 0;
          max-width: 100%;
        }
-       @media (max-width:em(1265)){
-           
-      }
-   }
+     }
    
  
 //====================================================================================================
+
+.servises {
+   background-color: #FBFBFB;
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: rem(30);
+      padding-bottom: rem(30);
+   }
+
+   &__title { &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100, 30);}
+   }
+
+   &__items {
+      width: 100%;
+      display: grid;
+      @include adaptiveValue("gap", 56, 0);
+      grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: rem(53) rem(30);
+   }
+}
+.title {
+
+   &__lable {
+      text-align: center;
+   }
+
+   &__value {
+   }
+}
+.item-servise { 
+
+   &__icon {
+      width: rem(56);
+      height: rem(56);
+      background-color:  #F5F3FE;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child) {margin-bottom: rem(24);}
+   }
+
+   &__title {
+      line-height: math.div(20, 16);
+      &:not(:last-child){
+         margin-bottom: rem(16);
+      }
+   }
+
+   &__text {
+      font-size: 14px;
+      text-align: center;
+      line-height: math.div( 24, 16);
+   }
+}
+
+//====================================================================================================
+
