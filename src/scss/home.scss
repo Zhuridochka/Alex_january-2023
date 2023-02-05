@@ -103,25 +103,23 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: rem(30);
+      padding-top: rem(130);
       padding-bottom: rem(30);
    }
 
-   &__title { &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 100, 30);}
+   &__title { 
+      &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 110, 30);}
    }
 
    &__items {
       width: 100%;
       display: grid;
-      @include adaptiveValue("gap", 56, 0);
+      @include adaptiveValue("gap", 56, 20);
       grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
    }
 
    &__item {
-      display: flex;
-      flex-direction: column;
-      
    }
 }
 // .title {
@@ -143,8 +141,8 @@
 
 
    &__icon {
-      width: 56px;
-      height: 56px;
+      width: rem(56);
+      height: rem(56);
       display: flex;
       background-color:  #F5F3FE;
       border-radius: rem(16);
@@ -154,6 +152,7 @@
    }
 
    &__title {
+      font-weight: 500;
       line-height: math.div(20, 16);
       &:not(:last-child){
          margin-bottom: rem(16);
@@ -162,10 +161,68 @@
 
    &__text {
       font-size: 14px;
-      text-align: center;
-      line-height: math.div( 24, 16);
+      font-weight: 400;
+      line-height: math.div( 24, 14);
    }
 }
 
 //====================================================================================================
+
+.portfolio {
+
+   &__container { 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: rem(80);
+      padding-bottom: rem(30);
+   }
+
+   &__header {
+      display: flex;
+      gap: rem(20);
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__title {
+   }
+
+   &__controls {
+      display: flex;
+      gap: rem(16);
+      text-align: center;
+     }
+
+   &__arrow {
+      width: rem(40);
+      height: rem(40);
+      background-color: #EAE6FE;
+      border-radius: 16px;
+      color: #7E74F1;
+      font-size: rem(12);
+      transition: all 0.3s ease 0s;;
+      @media (any-hover: hover){
+         &:hover{
+            background-color: #a59ee7;
+         }
+      }
+
+      &_left {
+         transform: rotate(-180deg);
+      }
+
+      &_right {
+      }
+   }
+}
+.title {
+
+   &__lable {
+   }
+
+   &__value {
+   }
+}
+
 
