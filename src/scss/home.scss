@@ -183,6 +183,7 @@
       gap: rem(20);
       justify-content: space-between;
       align-items: center;
+      @include adaptiveValue("margin-bottom", 110, 30);
    }
 
    &__title {
@@ -201,7 +202,7 @@
       border-radius: 16px;
       color: #7E74F1;
       font-size: rem(12);
-      transition: all 0.3s ease 0s;;
+      transition: background-color 0.3s ease 0s;;
       @media (any-hover: hover){
          &:hover{
             background-color: #a59ee7;
@@ -214,15 +215,50 @@
 
       &_right {
       }
+
+      &__slider {
+		}
+
+		&__wrapper {
+		}
+
+		&__slide {
+		}
+   }
+   
+.item-portfolio {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+  
+		&__image-ibg {
+         overflow: hidden;
+         padding-bottom: percent(295, 361);
+        img{
+         opacity: 0.5;
+        }
+		}
+
+		&__body {
+         
+		}
+
+		&__title {
+		}
+
+		&__link-title {
+		}
+
+		&__footer {
+		}
+
+		&__category {
+		}
+
+		&__link {
+		}
    }
 }
-.title {
 
-   &__lable {
-   }
-
-   &__value {
-   }
-}
 
 
