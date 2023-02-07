@@ -227,6 +227,8 @@
    }
    
 .item-portfolio {
+   background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+   border-radius: rem(8);
    overflow: hidden;
    display: flex;
    flex-direction: column;
@@ -234,28 +236,46 @@
 		&__image-ibg {
          overflow: hidden;
          padding-bottom: percent(295, 361);
-        img{
-         opacity: 0.5;
+         transition: opacity 0.8s ease 0s;
+          opacity: 0.5;
+        img {
+            object-position: top;
+            transition: transform 0.8s ease 0s;
+          }
+       @media (any-hover: hover){
+          &:hover{
+             opacity: 1;
+             img{
+               transform: scale(1.05);
+             }  
+          }
         }
 		}
 
 		&__body {
-         
+        padding: rem(24);
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        gap: rem(16);
 		}
 
 		&__title {
+        flex: 1 1 100%;
 		}
 
 		&__link-title {
-		}
-
-		&__footer {
+         font-weight: 500;
+         color: #232E35;
+         line-height:  math.div(20, 16);
 		}
 
 		&__category {
 		}
 
 		&__link {
+         font-size: rem(9.5);
+         text-align: center;
 		}
    }
 }
