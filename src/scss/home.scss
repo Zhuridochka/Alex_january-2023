@@ -262,12 +262,18 @@
 
 		&__title {
         flex: 1 1 100%;
+        
 		}
 
 		&__link-title {
          font-weight: 500;
-         color: #232E35;
+         color: #e27713;
          line-height:  math.div(20, 16);
+         @media (any-hover: hover){
+            &:hover{
+               color: $purpleColor;
+            }
+         }
 		}
 
 		&__category {
@@ -276,9 +282,10 @@
 		&__link {
          font-size: rem(9.5);
          text-align: center;
-		}
+         @media (any-hover: hover){
+            &:hover{
+               color: $purpleColor;
+		      }
+         }
+      }
    }
-}
-
-
-

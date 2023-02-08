@@ -85,4 +85,12 @@
    font-size: rem(12);
    padding: rem(4) rem(8);
    line-height:  math.div(15, 12);
+   
+@media (any-hover: hover){
+      &:hover{
+         background-color: $purpleColor;
+         border: rem(1) solid $purpleColor;
+         color: #F1F1F1;
+      }
+   }
 }
