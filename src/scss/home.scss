@@ -225,6 +225,7 @@
 		&__slide {
 		}
    }
+}
    
 .item-portfolio {
    background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
@@ -232,6 +233,7 @@
    overflow: hidden;
    display: flex;
    flex-direction: column;
+   min-height: 100%;
   
 		&__image-ibg {
          overflow: hidden;
@@ -254,20 +256,19 @@
 
 		&__body {
         padding: rem(24);
-        display: flex; 
-        flex-wrap: wrap;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
         gap: rem(16);
+        flex: 1 1 auto;
 		}
-
-		&__title {
+  
+   	&__title {
         flex: 1 1 100%;
-        
-		}
+          }
 
 		&__link-title {
          font-weight: 500;
-         color: #e27713;
+         color:$mainColor;
          line-height:  math.div(20, 16);
          @media (any-hover: hover){
             &:hover{
@@ -275,6 +276,12 @@
             }
          }
 		}
+
+      &__footer {
+         display: flex;
+         align-items: center;
+         gap: rem(16);
+          }
 
 		&__category {
 		}
