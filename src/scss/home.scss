@@ -184,6 +184,10 @@
       justify-content: space-between;
       align-items: center;
       @include adaptiveValue("margin-bottom", 110, 30);
+      @media (max-width: 650px){
+         flex-direction: column;
+         align-items: stretch;
+      }
    }
 
    &__title {
@@ -192,7 +196,11 @@
    &__controls {
       display: flex;
       gap: rem(16);
-      text-align: center;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 650px){
+          justify-content: center;
+      }
      }
 
    &__arrow {
@@ -217,6 +225,10 @@
       }
 
       &__slider {
+         @media (max-width: rem(650)) {
+            margin-right: rem(-15);
+            padding-right: rem(15);
+         }         
 		}
 
 		&__wrapper {
@@ -252,7 +264,10 @@
              }  
           }
         }
-		}
+        @media (any-hover: none){
+            opacity: 1;
+            }
+         }
 
 		&__body {
         padding: rem(24);

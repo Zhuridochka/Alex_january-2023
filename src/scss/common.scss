@@ -21,7 +21,8 @@
       color: $seriesColor;
       display: flex;
       align-items: center;
-      gap: rem(16);     
+      gap: rem(16); 
+         
       &::before{
          content: "";
           width: rem(16);
@@ -36,15 +37,14 @@
    &__value {
       font-style:'Plus Jakarta Sans';
       font-weight: 700;
-      font-size: rem(36);
       line-height: math.div( 45, 36);
+      @include adaptiveValue("font-size", 36, 32); 
       span {
          color: $purpleColor;
       }
       &_big {
-         font-size: rem(44);
-         line-height: math.div(55, 44);
-
+          line-height: math.div(55, 44);
+         @include adaptiveValue("font-size", 44, 38);
 		}
    }
 }
