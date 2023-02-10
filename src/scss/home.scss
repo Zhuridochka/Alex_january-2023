@@ -275,6 +275,7 @@
         flex-direction: column;
         gap: rem(16);
         flex: 1 1 auto;
+       
 		}
   
    	&__title {
@@ -311,3 +312,136 @@
          }
       }
    }
+
+//====================================================================================================
+
+.career {
+   background-color: #FBFBFB;
+
+   &__container {
+      padding-top: rem(80);
+      padding-bottom: rem(30);
+      display: grid;
+      align-content: center;
+      grid-auto-flow: column;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      @include adaptiveValue("column-gap", 144, 20);
+      @include adaptiveValue("row-gap", 80, 20);
+   }
+
+   &__title {
+   }
+
+   &__navigation {
+      
+   }
+
+   &__content { 
+      grid-row: span 2;
+   }
+}
+
+.navigation-career {
+      display: grid; 
+      gap: rem(10);
+    &__title {
+      text-align: left;
+      font-weight: 400;
+      line-height: math.div( 19, 16);
+      padding: rem(14) rem(24);
+      gap: rem(10);
+      display: flex;
+      justify-content: space-between; 
+      &._tab-active {
+         background-color: #fff;
+         color: $purpleColor;
+         &::after{
+            @extend %ic;
+            content: "\e903";  
+            font-size: rem(12);
+          }
+       }      
+   }
+}
+.content-career {
+
+   &__body {
+   }
+
+   &__header {
+      margin-bottom: rem(32);
+      border-bottom: 1px solid #F1F1F1;
+   }
+
+   &__title {
+      color: $mainColor;
+      font-size: rem(18);
+      &:not(:last-child){
+         margin-bottom: rem(8);
+      }
+   }
+
+   &__link-title {
+      text-decoration: underline;
+       @media (any-hover: hover){
+         &:hover{
+            text-decoration: none;
+         }
+      }   
+   }
+
+   &__location { 
+      font-size: rem(14);
+      color: $seriesColor;
+      line-height: math.div(24, 14);
+      &:not(:last-child){
+      margin-bottom: rem(16);
+      }
+   }
+
+   &__time { font-size: rem(14);
+      color: $seriesColor;
+      line-height: math.div(24, 14);
+      &:not(:last-child){
+      margin-bottom: rem(16);
+      }
+   }
+
+   &__categories {
+      display: flex;
+      gap: rem(16);
+      margin-bottom: rem(64);
+   }
+
+   &__main {
+   }
+
+   &__list {
+   }
+}
+.category-link {
+}
+.list-content-career {
+
+   &__item {
+      line-height: math.div(19, 16);
+      color: $seriesColor;
+      position: relative;
+      padding-left: rem(28);
+      &:not(:last-child){
+      margin-bottom: rem(16);
+      }
+      &::before{
+         content: "";
+          width: rem(16);
+          height: rem(2);
+          background-color: #D9D9D9;
+          position: absolute;
+          left: 0;
+          top: em(10, 16);
+        }
+   }
+}
+
+
