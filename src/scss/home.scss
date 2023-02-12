@@ -546,6 +546,7 @@
       padding: rem(16);
       display: grid;
       gap: rem(16);
+      flex: 1 1 auto;
    }
 
    &__date {
@@ -563,6 +564,7 @@
    &__text {
       line-height: math.div(32, 16);
       color: $seriesColor;
+     
    }
 
    &__category {
@@ -570,6 +572,59 @@
      justify-self: center;
    }
 }
+
+//====================================================================================================
+
+.page {
+
+   &__clients {
+   }
+}
+.clients {
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__items {
+   }
+
+   &__item {
+   }
+}
+.title {
+
+   &__lable {
+   }
+
+   &__value {
+   }
+}
+.item-clients {
+
+   &__image {
+   }
+
+   &__body {
+   }
+
+   &__text {
+   }
+
+   &__name {
+   }
+
+   &__link-name {
+   }
+
+   &__designer {
+   }
+}
+.category-link {
+}
+
 
 
 
