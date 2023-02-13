@@ -575,54 +575,94 @@
 
 //====================================================================================================
 
-.page {
-
-   &__clients {
-   }
-}
 .clients {
+   background: #FBFBFB;
 
    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+      padding-top: rem(130);
+      padding-bottom: rem(30);
    }
 
    &__title {
+   
    }
 
-   &__items {
+   &__items { 
+      @include adaptiveValue("padding-top", 142, 20);
+      @include adaptiveValue("padding-bottom", 190, 20);
+      display: grid;
+      @include adaptiveValue("gap", 48, 20);
+      grid-template-columns: repeat(auto-fill, minmax(rem(289), 1fr));
    }
 
    &__item {
    }
 }
-.title {
 
-   &__lable {
-   }
-
-   &__value {
-   }
-}
 .item-clients {
+   display: flex;
+   flex-direction: column;
+   background: #FFFFFF;
+   border-radius: rem(8);
+   padding-bottom: rem(24);
+   @include adaptiveValue("padding-left", 30, 10);
+   @include adaptiveValue("padding-right", 30, 10);
 
    &__image {
-   }
+      width: rem(96);
+      height: rem(96);
+      border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+      align-self: center;
+      margin-bottom: rem(32);
+     }
 
    &__body {
+   //    display: flex;
+   //   flex-direction: column;
+   //   flex: 1 1 auto;
    }
-
+    
    &__text {
-   }
+      flex: 1 1 auto;
+       line-height: math.div(28, 16);
+       &:not(:last-child) {
+        @include adaptiveValue("padding-bottom", 48, 20); 
+      }
+    }
 
    &__name {
+      font-size: rem(14);
+      line-height: math.div(18, 14);
+      font-weight: 500;
+      transition: hover 0.3s ease 0s;
+      &:not(:last-child) {
+         padding-bottom: rem(9);
+      }
+      @media (any-hover: hover){
+         &:hover{
+            color: $purpleColor;
+         }
+      }
    }
 
    &__link-name {
    }
 
    &__designer {
+      font-weight: 500;
+      font-size: rem(12);
+      line-height: math.div(15, 12);
+      color: $seriesColor;
    }
 }
-.category-link {
+.category-link { 
+   
 }
 
 
