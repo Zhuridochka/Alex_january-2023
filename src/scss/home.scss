@@ -564,8 +564,7 @@
    &__text {
       line-height: math.div(32, 16);
       color: $seriesColor;
-     
-   }
+    }
 
    &__category {
       margin-top: rem(24);
@@ -588,8 +587,7 @@
    }
 
    &__title {
-   
-   }
+    }
 
    &__items { 
       @include adaptiveValue("padding-top", 142, 20);
@@ -621,20 +619,15 @@
       align-self: center;
       margin-bottom: rem(32);
      }
-
-   &__body {
-   //    display: flex;
-   //   flex-direction: column;
-   //   flex: 1 1 auto;
-   }
     
    &__text {
       flex: 1 1 auto;
        line-height: math.div(28, 16);
        &:not(:last-child) {
         @include adaptiveValue("padding-bottom", 48, 20); 
-      }
-    }
+        
+      }    
+   }
 
    &__name {
       font-size: rem(14);
@@ -655,6 +648,7 @@
    }
 
    &__designer {
+      align-self: flex-start;
       font-weight: 500;
       font-size: rem(12);
       line-height: math.div(15, 12);
