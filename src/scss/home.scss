@@ -783,26 +783,28 @@
 //====================================================================================================
 
 .contacts {
+   // flex: 1 1 auto;
    background-color: #FBFBFB;  
    
    &__container {  
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            justify-content: center;
-            padding-top: rem(130);
-            padding-bottom: rem(30);
-       }
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         padding-top: rem(130);
+         padding-bottom: rem(30);
+         }
 
       &__content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            @include adaptiveValue("gap", 104, 30);
-      }
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         @include adaptiveValue("gap", 104, 30);
+         @media (max-width:em(850)){
+             grid-template-columns: 1fr; 
+         }
+         }
 
       &__form {
-           
-      }
+         }
    
        &__body {
          }
@@ -821,6 +823,9 @@
             font-size: rem(14);
             line-height: math.div(17 , 14);
             width: 100%;
+            &:last-child{
+               padding-top: rem(22);
+            }
          }
    
          &__input {
@@ -839,7 +844,7 @@
             } 
          }
 
-         &__bottom {
+         &__button {
             text-align: center;
             font-size: rem(14);
             line-height: math.div(17 , 14);
@@ -852,27 +857,31 @@
             transition: all 0.3s ease 0s;
             @media (any-hover: hover){
                &:hover{
-                  color: $mainColor;
-                  background-color: #d9d4f3;
-                  border: 1px solid $mainColor;
+                  // color: $mainColor;
+                  background-color: #5b51c5;
+                  // border: 1px solid $mainColor;
                }
             }
          }
-   }
+
+         &__error{
+            color: red;
+            font-size: rem(12);
+         }
+      }
    textarea.form__input{
       height: rem(190);
       resize: vertical;
+      padding: rem(24);
    }
  
-   .bottom-link {
+   .button-link {
    }
-
    
    .list-contacts {
       display: grid;
       @include adaptiveValue("gap", 40, 20);
      
-   
          &__item {
             display: flex;
             align-items: center;
@@ -891,7 +900,6 @@
    
          &__body {
             padding-left: rem(24);
-
          }
    
          &__title {
@@ -899,15 +907,21 @@
             line-height: math.div(19, 16);
             &:not(:last-child) {
                margin-bottom: rem(4);
+            }
          }
-      }
    
          &__text {
             font-size: rem(14);
             line-height: math.div(24 , 14);
             color: $seriesColor;
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover){
+               &:hover{
+                  color: $purpleColor;
+               }
+            }
          }
-   }
+ }
    
 
 

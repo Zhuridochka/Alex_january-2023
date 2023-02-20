@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main data-fp class="page">
-					<!-- <section data-fp-section class="page__main main-section">
+				<section data-fp-section class="page__main main-section">
 					<div data-tabs class="main-section__container">
 						<div class="main-section__content">
 							<div class="main-section__title title">
@@ -231,10 +231,10 @@
 						</div>
 						</div>
 					</div>
-					</div>
 				</div>
-					</section> -->
-					 <!-- <section data-fp-section class="page__blog blog">
+			</div>
+					</section> 
+					 <section data-fp-section class="page__blog blog">
 					<div class="blog__container">
 						<div class="blog__title title">
 							<div class="title__lable">MY ARTICLES</div>
@@ -287,8 +287,8 @@
 							</article>
 						</div>
 					</div>
-					</section> --> -->
-					<!-- <section  data-fp-section class="page__clients clients">
+					</section>
+					<section data-fp-section class="page__clients clients">
 					<div class="clients__container">
 						<div class="clients__title title">
 							<div class="title__lable">MY CLIENTS</div>
@@ -331,7 +331,7 @@
 							</article>
 							</div>
 						</div>
-					</section> -->  -->
+					</section> 
 					<section data-fp-section class="page__skills skills">
 						<div class="skills__container">
 							<div class="skills__title title">
@@ -382,22 +382,23 @@
 								</div>
 							</div>							
 						</div>
-					</section>  -->
+					</section>
 					<section data-fp-section class="page__contacts contacts">
 						<div class="contacts__container">
 							<div class="contacts__content">
 								<form action="№" class="contacts__form form">
 									<div class="form__item">
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Name" class="form__input">
+										<input autocomplete="off" type="text" name="form[]" data-required data-error="error" placeholder="Name" class="form__input">
 									</div>
 									<div class="form__item">
-										<input autocomplete="off" type="text" name="form[]" data-error="#" placeholder="Email" class="form__input">
+										<input autocomplete="off" type="text" name="form[]" data-required="email" data-error="error" placeholder="Email" class="form__input">
 									</div>
 									<div class="form__item">
-										<textarea autocomplete="off" name="form[]" placeholder="Message" data-error="Error" class="form__input"></textarea>
+										<textarea autocomplete="off" name="form[]" placeholder="Message" data-error="#" class="form__input"></textarea>
 									</div>
 									<div class="form__item">
-									<a href="" class="form__bottom bottom-link">Send Message</a></div>
+									<a href="" class="form__button button-link">Send Message</a>
+									</div>
 								</form>
 								<div class="contacts__body">
 									<ul class="contacts__list list-contacts">
@@ -431,13 +432,27 @@
 									</ul>
 								</div>
 							</div>
+							<footer class="footer">
+								<div class="footer__container">
+									<ul class="footer__social social">
+										<a class="social__link _icon-s-Insta"></a>	
+										<a class="social__link _icon-s-github"></a>
+										<a class="social__link _icon-s-twiter"></a>
+										<a class="social__link _icon-s-linkedin"></a>
+									</ul>
+									<div class="footer__copy">© 2022 - DevChapter</div>
+								</div>
+							</footer>
 						</div>
+						
 					</section>
-				</main>
+			</main>
+			
 		</div>
-		@@include('html/_footer.htm',{})
-		</div>
+		<!-- @@include('html/_footer.htm',{}) -->
 		@@include('html/_js.htm',{})
+		</div>
+		
 	</body>
 </html>
 
