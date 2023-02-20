@@ -1,12 +1,8 @@
-.bottom-page {
-display: flex;
-flex-direction: column;
-}
+
 
 //==================================================================================================
 .footer {
   
-
    &__container {
       display: flex;
       justify-content: center;
@@ -35,8 +31,7 @@ flex-direction: column;
    }
    &[data-fp-section]{
       height: auto;
-   }
-   
+   }  
 }
 
 //====================================================================================================
